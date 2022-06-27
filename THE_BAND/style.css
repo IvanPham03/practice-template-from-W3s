@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+#nav-1 {
+    position: fixed;
+    display: flex;
+    background-color: #000;
+    width: 100vw;
+    z-index: 1;
+    height: 40px;
+}
+
+#nav-1>a {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    height: 40px;
+    padding: 0 20px;
+    line-height: 40px;
+    color: #fff;
+    font-weight: 400;
+    margin-left: 0;
+    border-radius: 0;
+}
+
+#nav-1>a:hover {
+    color: #000 !important;
+    background-color: #ccc !important;
+}
+
+#drop-box {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    text-transform: none;
+    height: 40px;
+    padding: 0 20px;
+    line-height: 40px;
+    color: #fff;
+    font-weight: 400;
+    margin-left: 0;
+    border-radius: 0;
+}
+#drop-box > span {
+    text-transform: uppercase;
+}
+
+#drop-box:hover {
+    color: #000 !important;
+    background-color: #ccc !important;
+    cursor: pointer;
+}
+
+#drop-items {
+    position: absolute;
+    left: 0;
+    display: none;
+}
+
+#drop-items>a {
+    text-decoration: none;
+    
+    padding: 0 10px;
+    line-height: 40px;
+    height: 40px;
+    color: #000;
+    background-color: #fff;
+}
+
+#drop-box:hover>#drop-items {
+    color: #000;
+    background-color: #fff;
+    display: block;
+}
+
+#drop-items>a:hover {
+    display: inline-block;
+    color: #000 !important;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    background-color: #ccc !important;
+}
+
+.search {
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 20px;
+    color: #fff;
+
+}
+
+.search:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #FF0000;
+}
+
+#home {
+    top: 40px;
+    position: relative;
+}
+
+.text {
+    bottom: 50px;
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.text>h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+#home img {
+    width: 100vw;
+}
+
+.container {
+    padding: 80px 200px;
+    margin: 0 65px;
+    text-align: center;
+}
+
+.container>p {
+    text-align: justify;
+}
+
+.container .title {
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+.container .sup-title {
+    margin-bottom: 25px;
+    font-size: 15px;
+    font-weight: 100;
+    opacity: 0.7;
+}
+
+#container-member {
+    display: flex;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.member {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.member>img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.member p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#band {
+    margin-top: 40px;
+}
+
+#tour {
+    background-color: #000;
+    color: #fff;
+}
+
+#tickets>li {
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    padding: 10px;
+
+    border-bottom: solid 1px #ddd;
+}
+
+#tickets {
+    background-color: #fff;
+    color: #757575 !important;
+    ;
+}
+
+#tickets .sale {
+    margin-left: 20px;
+    background-color: #FF0000;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+
+#tickets .remaining {
+    margin: 0 16px 0 0;
+    border-radius: 50%;
+    background: #000;
+    padding: 0px 10px;
+    line-height: 20px;
+    font-size: 15px;
+    float: right;
+    color: #fff;
+}
+
+
+#scheduel {
+    margin: 30px auto;
+    display: flex;
+}
+
+.cover-2 {
+    background-color: #fff;
+    width: calc(100%3);
+    color: #000;
+    text-align: left;
+    background-color: #000;
+}
+
+.cover {
+    background-color: #fff;
+    margin: 10px;
+}
+
+.cover>img {
+    width: 100%;
+}
+
+.cover-3 {
+    padding: 15px;
+    line-height: 1.5rem;
+}
+
+.cover-3>button {
+    padding: 8px 10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.cover-3>button:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+.cover-3>h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#input-form {
+    display: flex;
+    background-color: aqua;
+}
