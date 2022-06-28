@@ -131,7 +131,7 @@
                                 <p>
                                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
-                                <button>
+                                <button class="button-buy">
                                     Buy Tickets
                                 </button>
                             </div>
@@ -148,7 +148,7 @@
                                 <p>
                                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
-                                <button>
+                                <button class="button-buy">
                                     Buy Tickets
                                 </button>
                             </div>
@@ -165,7 +165,7 @@
                                 <p>
                                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
-                                <button>
+                                <button class="button-buy">
                                     Buy Tickets
                                 </button>
                             </div>
@@ -212,10 +212,35 @@
                 <i class="fa fa-twitter"></i>
                 <i class="fa fa-linkedin"></i>
             </p>
-            <p >Powered by <a id="author" href="https://github.com/IvanPham03" target="_blank">IvanPham</a></p>
+            <p>Powered by <a id="author" href="https://github.com/IvanPham03" target="_blank">IvanPham</a></p>
         </footer>
     </main>
-    <script src="script.js" type="text/javascript"></script>
+    <div class="modal">
+        <div class="modal-container">
+            <div class="modal-head">
+                <span class="modal-title">
+                    <i class="fa fa-solid fa-briefcase"></i> Tickets
+                </span>
+                <p class="close button-close">X</p>
+            </div>
+            <form id="modal-input">
+                <div><i class="fa-solid fa-cart-shopping"></i> Tickets, $15 per person</div>
+                <input id="modal-mount" type="email" placeholder="How many?">
+                <div><i class="fa-solid fa-user"></i> Send to</div>
+                <input id="modal-email" type="text" placeholder="Enter email">
+                <button id="modal-submit">Pay <span><i class="fa-solid fa-check"></i></span></button>
+            </form>
+            <div id="modal-foot">
+                <button class="close-2 button-close">Close x</button>
+                <p id="help">
+                    Need <a href="#">help?</a>
+                </p>
+
+            </div>
+        </div>
+        
+    </div>
 </body>
+<script src="script.js" type="text/javascript"></script>
 
 </html>

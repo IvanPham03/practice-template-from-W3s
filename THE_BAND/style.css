@@ -9,10 +9,12 @@ body {
     font-size: 15px;
     line-height: 1.5rem;
 }
+
 main {
     width: auto;
 }
-#nav{
+
+#nav {
     position: fixed;
     display: flex;
     background-color: #000;
@@ -52,7 +54,8 @@ main {
     margin-left: 0;
     border-radius: 0;
 }
-#drop-box > span {
+
+#drop-box>span {
     text-transform: uppercase;
 }
 
@@ -80,7 +83,7 @@ main {
 
 #drop-box:hover>#drop-items {
     color: #000;
-    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: #fff;
     display: block;
 }
@@ -145,13 +148,14 @@ main {
     text-align: justify;
 }
 
-.container > .title {
+.container>.title {
     font-weight: 400;
     font-size: 30px;
     letter-spacing: 4px;
     margin-bottom: 30px;
 }
-.container > .sup-title {
+
+.container>.sup-title {
     margin-bottom: 25px;
     font-size: 15px;
     font-weight: 100;
@@ -245,6 +249,10 @@ main {
     width: 100%;
 }
 
+.cover>img:hover {
+    opacity: 0.5;
+}
+
 .cover-3 {
     padding: 15px;
     line-height: 1.5rem;
@@ -264,10 +272,12 @@ main {
     color: #000;
     cursor: pointer;
 }
-.cover-3 > .sup {
+
+.cover-3>.sup {
     color: #757575 !important;
     padding: 10px 0;
 }
+
 #address-row {
     position: relative;
     margin-bottom: 150px;
@@ -277,6 +287,7 @@ main {
     font-size: 16px;
     margin-bottom: 10px;
 }
+
 #address {
     float: left;
     text-align: left;
@@ -284,12 +295,14 @@ main {
 }
 
 
-#mail, #name {
+#mail,
+#name {
     float: right;
     width: 150px;
     margin-left: 5px;
     line-height: 30px;
 }
+
 #mess {
     position: absolute;
     right: 0;
@@ -318,10 +331,12 @@ main {
     cursor: pointer;
     background-color: #ccc;
 }
-#map > img {
+
+#map>img {
     width: 100vw;
 }
-footer > p {
+
+footer>p {
     display: block;
     text-align: center;
     padding: 15px;
@@ -339,4 +354,100 @@ footer {
     color: #000;
     text-decoration: none;
     font-style: italic;
+}
+
+.modal {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.modal-container {
+    width: 800px;
+    margin: 150px auto;
+    display: block;
+    background-color: #fff;
+    position: relative;
+}
+
+.modal-title {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    width: 100%;
+    padding: 4rem;
+    background-color: #009688 !important;
+}
+
+.close {
+    display: block;
+    position: absolute;
+    font-size: 15px;
+    padding: 10px 0;
+    right: 0;
+    top: 0;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    width: 40px;
+}
+#modal-input {
+    margin: 20px;
+    font-size: 15px;
+    list-style: 2rem;
+}
+
+#modal-input>input {
+    width: 100%;
+    line-height: 2rem;
+    margin: 10px auto;
+}
+
+#modal-submit {
+    width: 100%;
+    line-height: 2.5rem;
+    background-color: #009688 !important;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 1px;
+    border: none;
+}
+
+#help {
+    float: right;
+    margin: 20px;
+}
+
+
+#help > a {
+    color: deepskyblue;
+}
+.close-2 {
+    line-height: 2rem;
+    font-size: 15px;
+    margin: 20px;
+    padding: 0 10px;
+    background-color: #FF0000;
+    border: none;
+    border-radius: 1px;
+    color: #fff;
+}
+
+.close:hover, #modal-submit:hover, .close-2:hover {
+    background-color: #ccc !important;
+    cursor: pointer;
+    color: #000 !important;
+}
+
+.button-buy {
+
+}
+
+.modal.open{
+    display: flex !important;
 }
