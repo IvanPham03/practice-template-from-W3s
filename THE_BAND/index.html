@@ -13,7 +13,7 @@
 
 <body>
     <main>
-        <nav id="nav-1">
+        <nav id="nav">
             <a href="#">Home</a>
             <a href="#">band</a>
             <a href="#">Tour</a>
@@ -125,9 +125,9 @@
                             <img src="img/newyork.jpeg" alt="">
                             <div class="cover-3">
                                 <h5>New York</h5>
-                                <p>
+                                <p class="sup">
                                     Fri 27 Now 2016
-                                </p>
+                                    </pn>
                                 <p>
                                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
@@ -142,7 +142,7 @@
                             <img src="img/paris.jpeg" alt="">
                             <div class="cover-3">
                                 <h5>Paris</h5>
-                                <p>
+                                <p class="sup">
                                     Sat 28 Now 2016
                                 </p>
                                 <p>
@@ -159,7 +159,7 @@
                             <img src="img/newyork.jpeg" alt="">
                             <div class="cover-3">
                                 <h5>San Francisco</h5>
-                                <p>
+                                <p class="sup">
                                     Fri 27 Now 2016
                                 </p>
                                 <p>
@@ -179,24 +179,24 @@
                 <h2 class="title">
                     CONTACT
                 </h2>
-                <h5>Fan? Drop a note!</h5>
+                <h5 class="sup-title">Fan? Drop a note!</h5>
                 <div id="address-row">
                     <div id="address">
                         <p>
-                            <span><i class="fa fa-map-marker"></i> Chicago, US</span>
+                            <span><i class="fa fa-map-marker"></i> HCM, VN</span>
                         </p>
                         <p>
-                            <span><i class="fa fa-phone"></i> +00151515</span>
+                            <span><i class="fa fa-phone"></i> +840000</span>
                         </p>
                         <p>
-                            <span><i class="fa fa-envelope"></i> Email: mail@mail.com</span>
+                            <span><i class="fa fa-envelope"></i> Email: dangtruongphamvn@gmail.com</span>
                         </p>
                     </div>
                     <form id="input-form">
-                        <input type="text" placeholder="Name">
-                        <input type="text" placeholder="Email">
-                        <input type="text" placeholder="Message">
-                        <button>send</button>
+                        <input type="email" placeholder="Email" id="mail">
+                        <input id="name" type="text" placeholder="Name">
+                        <input id="mess" type="text" placeholder="Message">
+                        <button id="send">SEND</button>
                     </form>
                 </div>
             </div>
@@ -206,12 +206,13 @@
             <img src="img/map.jpeg" alt="">
         </div>
         <footer>
-            <p><i class="fa fa-facebook"></i></p>
-            <p><i class="fa fa-brands fa-instagram"></i></p>
-            <p><i class="fa fa-snapchat"></i></p>
-            <p><i class="fa fa-twitter"></i></p>
-            <p><i class="fa fa-linkedin"></i></p>
-            <p>Powered by <a href="https://github.com/IvanPham03" target="_blank">IvanPham</a></p>
+            <p><i class="fa fa-facebook"></i>
+                <i class="fa fa-brands fa-instagram"></i>
+                <i class="fa fa-snapchat"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-linkedin"></i>
+            </p>
+            <p >Powered by <a id="author" href="https://github.com/IvanPham03" target="_blank">IvanPham</a></p>
         </footer>
     </main>
     <script src="script.js" type="text/javascript"></script>

@@ -5,7 +5,14 @@
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
-#nav-1 {
+body {
+    font-size: 15px;
+    line-height: 1.5rem;
+}
+main {
+    width: auto;
+}
+#nav{
     position: fixed;
     display: flex;
     background-color: #000;
@@ -14,7 +21,7 @@
     height: 40px;
 }
 
-#nav-1>a {
+#nav>a {
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
@@ -27,7 +34,7 @@
     border-radius: 0;
 }
 
-#nav-1>a:hover {
+#nav>a:hover {
     color: #000 !important;
     background-color: #ccc !important;
 }
@@ -63,16 +70,17 @@
 
 #drop-items>a {
     text-decoration: none;
-    
-    padding: 0 10px;
+    padding: 0 35px 0 10px;
     line-height: 40px;
     height: 40px;
     color: #000;
     background-color: #fff;
+    width: 100%;
 }
 
 #drop-box:hover>#drop-items {
     color: #000;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
     background-color: #fff;
     display: block;
 }
@@ -137,13 +145,13 @@
     text-align: justify;
 }
 
-.container .title {
+.container > .title {
     font-weight: 400;
     font-size: 30px;
     letter-spacing: 4px;
     margin-bottom: 30px;
 }
-.container .sup-title {
+.container > .sup-title {
     margin-bottom: 25px;
     font-size: 15px;
     font-weight: 100;
@@ -181,11 +189,11 @@
 }
 
 #tickets>li {
+    list-style: none;
     width: 100%;
     font-size: 14px;
     text-align: left;
     padding: 10px;
-
     border-bottom: solid 1px #ddd;
 }
 
@@ -256,13 +264,79 @@
     color: #000;
     cursor: pointer;
 }
+.cover-3 > .sup {
+    color: #757575 !important;
+    padding: 10px 0;
+}
+#address-row {
+    position: relative;
+    margin-bottom: 150px;
+}
 
 .cover-3>h5 {
     font-size: 16px;
     margin-bottom: 10px;
 }
+#address {
+    float: left;
+    text-align: left;
+    line-height: 1.5rem;
+}
 
-#input-form {
-    display: flex;
-    background-color: aqua;
+
+#mail, #name {
+    float: right;
+    width: 150px;
+    margin-left: 5px;
+    line-height: 30px;
+}
+#mess {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 305px;
+    line-height: 30px;
+    display: inline-block;
+
+}
+
+#send {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    display: inline-block;
+    height: 30px;
+    padding: 2px 10px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+}
+
+
+#send:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+#map > img {
+    width: 100vw;
+}
+footer > p {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    color: #757575;
+}
+
+footer {
+    width: 100%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+#author {
+    color: #000;
+    text-decoration: none;
+    font-style: italic;
 }
