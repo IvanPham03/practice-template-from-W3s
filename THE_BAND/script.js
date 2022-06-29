@@ -36,3 +36,19 @@ for(const btnTicket of btnTickets){
 for(const remove of removes){
     remove.addEventListener('click', hidden);
 }
+
+
+var showMenu = document.getElementById('menu-mobile');
+var nav = document.getElementById('header');
+showMenu.onclick = function () {
+    var height = nav.clientHeight === 40;
+    if(height){
+        nav.style.height = 'auto';
+    }
+    else {
+        nav.style.height = "40px";
+    }
+}
+
+
+

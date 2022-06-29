@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="resposive.css" type="text/css">
 
 <body>
     <main>
-        <nav id="nav">
+        <nav id="header">
             <a href="#">Home</a>
             <a href="#">band</a>
             <a href="#">Tour</a>
@@ -28,6 +29,7 @@
                 </div>
             </div>
             <p><i class="fa-solid fa-magnifying-glass search"></i></p>
+            <p><i class="fa-solid fa-bars menu" id="menu-mobile"></i></p>
         </nav>
 
         <!-- ____________________________________________________ -->
@@ -193,9 +195,9 @@
                         </p>
                     </div>
                     <form id="input-form">
-                        <input type="email" placeholder="Email" id="mail">
-                        <input id="name" type="text" placeholder="Name">
-                        <input id="mess" type="text" placeholder="Message">
+                        <input type="email" placeholder="Email" id="mail" required>
+                        <input id="name" type="text" placeholder="Name" required>
+                        <input id="mess" type="text" placeholder="Message" required>
                         <button id="send">SEND</button>
                     </form>
                 </div>
@@ -238,7 +240,9 @@
 
             </div>
         </div>
-        
+        <!-- pc >= max-width: 1024px -->
+        <!-- table: 740px & < 1024px  -->
+        <!-- mobile: <740 -->
     </div>
 </body>
 <script src="script.js" type="text/javascript"></script>

@@ -14,7 +14,7 @@ main {
     width: auto;
 }
 
-#nav {
+#header {
     position: fixed;
     display: flex;
     background-color: #000;
@@ -23,7 +23,7 @@ main {
     height: 40px;
 }
 
-#nav>a {
+#header>a {
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
@@ -36,7 +36,8 @@ main {
     border-radius: 0;
 }
 
-#nav>a:hover {
+#header>a:hover {
+    width: 25%;
     color: #000 !important;
     background-color: #ccc !important;
 }
@@ -97,7 +98,7 @@ main {
     background-color: #ccc !important;
 }
 
-.search {
+.search, .menu {
     position: absolute;
     right: 0;
     top: 0;
@@ -106,6 +107,10 @@ main {
     padding: 0 20px;
     color: #fff;
 
+}
+
+.menu {
+    display: none;
 }
 
 .search:hover {
@@ -327,7 +332,7 @@ main {
 }
 
 
-#send:hover {
+.menu:hover, #send:hover {
     cursor: pointer;
     background-color: #ccc;
 }
@@ -461,4 +466,8 @@ footer {
  @keyframes example {
     from {top: -100px;}
     to {top: 0px; background-color: none;}
+  }
+
+  .showMenu {
+    overflow: visible;
   }
