@@ -10,9 +10,6 @@ body {
     line-height: 1.5rem;
 }
 
-main {
-    width: auto;
-}
 
 #header {
     position: fixed;
@@ -37,7 +34,6 @@ main {
 }
 
 #header>a:hover {
-    width: 25%;
     color: #000 !important;
     background-color: #ccc !important;
 }
