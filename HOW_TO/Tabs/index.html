@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        #tab {
+            background-color: #eee;
+            display: flex;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        .tabLink {
+            border: none;
+            font-size: 20px;
+            padding: 10px;
+            width: 100px;
+        }
+
+        .tab--blink:hover {
+            transition: 0.4s;
+            cursor: pointer;
+            background-color: #ddd;
+
+        }
+
+        .tabContent {
+            animation: fade 1s;
+            border: 1px solid #ddd;
+            display: none;
+            padding: 10px 15px;
+        }
+
+        p,
+        h3 {
+            margin: 10px 0;
+
+        }
+
+        .active {
+            transition: 0.4s;
+            background-color: #ccc;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+
+        }
+        .close {
+            float: right;
+            font-size: 16px;
+            font-weight: normal;
+        
+        } 
+        .close:hover {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- btn tabs -->
+    <div id="tab">
+        <button class="tabLink" onclick="myFunction(event, 'London')">London</button>
+        <button class="tabLink" onclick="myFunction(event, 'Tokyo')">Tokyo</button>
+        <button class="tabLink" onclick="myFunction(event, 'Paris')">Paris</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="London" class="tabContent">
+        <span class="close" onclick="this.parentElement.style.display='none'">x</span>
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+    </div>
+
+    <div id="Paris" class="tabContent">
+        <span class="close" onclick="this.parentElement.style.display='none'">x</span>
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="Tokyo" class="tabContent">
+        <span class="close" onclick="this.parentElement.style.display='none'">x</span>
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+</body>
+<script>
+    function myFunction(event, name) {
+        var i;
+        var tabLink = document.getElementsByClassName('tabLink');
+        var tabContent = document.getElementsByClassName('tabContent');
+
+        for (i = 0; i < tabContent.length; i++) {
+            tabContent[i].style.display = 'none';
+        }
+        for (i = 0; i < tabLink.length; i++) {
+            tabLink[i].className = tabLink[i].className.replace('active', '');
+        }
+        document.getElementById(name).style.display = 'block';
+        event.currentTarget.className += ' active';
+    }
+    // document.getElementById('close').click();
+
+</script>
+
+</html>
