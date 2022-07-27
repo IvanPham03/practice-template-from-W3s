@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Accordion</title>
     <style>
         .accordion {
@@ -32,9 +32,8 @@
             font-weight: bold;
         }
         .active:after {
-            content: "\2212";
+            content: '\2212';
             /* transition: 0.5s; */
-            float: right;
         } 
         
         .panel {
@@ -52,46 +51,50 @@
         Accordion
     </h2>
     <p>Click on the buttons to open the collapsible content.</p>
-    <button class="accordion">Section 1</button>
-    <div class="panel">
+    <button class='accordion'>Section 1</button>
+    <div class='panel'>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat.</p>
     </div>
 
-    <button class="accordion">Section 2</button>
-    <div class="panel">
+    <button class='accordion'>Section 2</button>
+    <div class='panel'>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat.</p>
     </div>
-    <button class="accordion">Section 3</button>
-    <div class="panel">
+    <button class='accordion'>Section 3</button>
+    <div class='panel'>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat.</p>
     </div>
+</body>
     <script>
         var acc = document.getElementsByClassName('accordion');
         var i;
 
         for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-                this.classList.toggle("active");
+            acc[i].addEventListener('click', function () {
+                this.classList.toggle('active');
                 var panel = this.nextElementSibling;
-                if (panel.style.height) {
-                    panel.style.height = null;
+                // console.log(panel.style.height);
+                // console.log(panel.style.width);
+                if (panel.style.height > 0 + 'px') {
+                    panel.style.height = 0+'px';
+                // gia tri chieu cao la khong co, nen co the gan lai bang null/ 0px
+                // if (panel.style.height) {
+                // panel.style.height = null
+                // }
                 } else {
-                    console.log(panel.scrollHeight);
-
                     //  lay chieu cao bang voi chieu cao can thiet de chua no
-                    panel.style.height = panel.scrollHeight + "px";
+                    panel.style.height = panel.scrollHeight + 'px';
                     // console.log(panel.Height);
                 }
             });
 
         }
     </script>
-</body>
 
 </html>
