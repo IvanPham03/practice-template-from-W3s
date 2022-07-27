@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Tabs</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        
+        }
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .tab {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+        }
+
+        .tabLinks {
+            width: 100%;
+            text-align: left;
+            border: none;
+            font-size: 18px;
+            padding: 18px;
+        }
+
+        button:hover {
+            background-color: #ddd;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #ccc;
+
+        }
+
+        .tabContent {
+            float: left;
+            padding: 0px 12px;
+            border: 1px solid #ccc;
+            width: 70%;
+            display: none;
+            border-left: none;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Vertical Tabs</h2>
+    <p>Click on the buttons inside the tabbed menu:</p>
+
+    <div class="tab">
+        <button class="tabLinks" onclick="openCity(event, 'London')">London</button>
+        <button class="tabLinks" onclick="openCity(event, 'Paris')">Paris</button>
+        <button class="tabLinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+    </div>
+
+    <div id="London" class="tabContent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+    </div>
+
+    <div id="Paris" class="tabContent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="Tokyo" class="tabContent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+</body>
+<script>
+    function openCity(event, name) {
+        var i;
+        var tabLinks = document.getElementsByClassName('tabLinks');
+        var tabContent= document.getElementsByClassName('tabContent');
+
+
+        for(i = 0; i < tabContent.length; i++){
+            tabContent[i].style.display = 'none';
+        }
+
+        for(i= 0; i < tabLinks.length ; i++){
+            tabLinks[i].className = tabLinks[i].className.replace('active', '');
+        
+        }
+
+        document.getElementById(name).style.display = 'block';
+        event.currentTarget.className += ' active';
+    }
+</script>
+
+</html>
