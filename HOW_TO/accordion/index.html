@@ -17,24 +17,32 @@
             text-align: left;
             outline: none;
             font-size: 15px;
-            transition: 0.4s;
         }
 
         .active,
         .accordion:hover {
             background-color: #ccc;
         }
-
+        
+        .accordion:after {
+            content: '\002B';
+            float: right;
+            font-size: 14px;
+            color: blue;
+            font-weight: bold;
+        }
+        .active:after {
+            content: "\2212";
+            /* transition: 0.5s; */
+            float: right;
+        } 
+        
         .panel {
             padding: 0 18px;
             background-color: white;
             height: 0;
             overflow: hidden;
-            transition: max-height 0.4s ease-in-out;
-        }
-        .panel1 {
-            max-height: 236px;
-        
+            transition: height 0.4s ease-in-out;
         }
     </style>
 </head>
@@ -46,7 +54,7 @@
     <p>Click on the buttons to open the collapsible content.</p>
     <button class="accordion">Section 1</button>
     <div class="panel">
-        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat.</p>
     </div>
@@ -59,14 +67,14 @@
     </div>
     <button class="accordion">Section 3</button>
     <div class="panel">
-        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat.</p>
     </div>
     <script>
         var acc = document.getElementsByClassName('accordion');
         var i;
-    
+
         for (i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function () {
                 this.classList.toggle("active");
@@ -74,7 +82,6 @@
                 if (panel.style.height) {
                     panel.style.height = null;
                 } else {
-                    panel.style.backgroundColor = "red";
                     console.log(panel.scrollHeight);
 
                     //  lay chieu cao bang voi chieu cao can thiet de chua no
@@ -82,7 +89,7 @@
                     // console.log(panel.Height);
                 }
             });
-    
+
         }
     </script>
 </body>
